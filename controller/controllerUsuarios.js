@@ -5,7 +5,7 @@ exports.listar = (req, res, next) => {
         if(error){
             res.send(error);
         }
-        res.send(usuarios);
+        res.status(200).send(usuarios);
     });
 }
 exports.inserir = (req, res, next) => {
@@ -14,7 +14,7 @@ exports.inserir = (req, res, next) => {
         if(err){
             res.send(err);
         }
-        res.send(usuario);
+        res.status(200).send(usuario);
     })
 }
 exports.atualizar = (req, res, next) => {
@@ -24,7 +24,7 @@ exports.atualizar = (req, res, next) => {
         if(err){
             res.send(err);
         }
-        res.send(usuario);
+        res.status(200).send(usuario);
     });
 }
 exports.deletar = (req, res, next) => {
@@ -33,7 +33,7 @@ exports.deletar = (req, res, next) => {
         if(err){
             res.send(err);
         }
-        res.send(usuario);
+        res.status(200).send(usuario);
     });
 }
 exports.buscarPorId = (req, res, next) => {
@@ -42,7 +42,7 @@ exports.buscarPorId = (req, res, next) => {
         if(err){
             res.send(err);
         }
-        res.send(usuario);
+        res.status(200).send(usuario);
     })
 }
 exports.procurar = (req, res, next) => {
@@ -56,7 +56,7 @@ exports.procurar = (req, res, next) => {
             if(err){
                 res.send(err);
             }
-            res.send(usuario);
+            res.status(200).send(usuario);
         });
     }
 }

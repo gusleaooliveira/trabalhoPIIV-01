@@ -36,11 +36,11 @@ app.use((req, res, next) => {
     let data = new Date();
     console.warn();
     console.warn("#############################");
-    console.warn(`Hora da requisição : ${data.getHours()}:${data.getMinutes()}:${data.getSeconds()} - ${data.getDate()}/${data.getMonth}/${data.getFullYear()}`);
+    console.warn(`Hora da requisição : ${data.getHours()}:${data.getMinutes()}:${data.getSeconds()} - ${data.getDate()}/${data.getMonth()}/${data.getFullYear()}`);
     console.warn(`(Método) Url: (${req.method}) ${req.url}`);
-    console.warn(`Body: ${Object.entries(req.body)}`);
-    console.warn(`Cookies sem segurança: ${req.cookies}`);
-    console.warn(`Cookies com segurança: ${req.signedCookies}`);
+    console.warn(`Body: ${Object.values(req.body)}`);
+    console.warn(`Cookies sem segurança: ${Object.values(req.cookies)}`);
+    console.warn(`Cookies com segurança: ${Object.values(req.signedCookies)}`);
     console.warn("#############################");
     console.warn();
     next();

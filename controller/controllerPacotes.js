@@ -5,7 +5,7 @@ exports.listar = (req, res, next) => {
         if(error){
             res.send(error);
         }
-        res.send(pacotes);
+        res.status(200).send(pacotes);
     });
 }
 exports.inserir = (req, res, next) => {
@@ -14,7 +14,7 @@ exports.inserir = (req, res, next) => {
         if(err){
             res.send(err);
         }
-        res.send(pacote);
+        res.status(200).send(pacote);
     })
 }
 exports.atualizar = (req, res, next) => {
@@ -24,7 +24,7 @@ exports.atualizar = (req, res, next) => {
         if(err){
             res.send(err);
         }
-        res.send(pacote);
+        res.status(200).send(pacote);
     });
 }
 exports.deletar = (req, res, next) => {
@@ -33,7 +33,7 @@ exports.deletar = (req, res, next) => {
         if(err){
             res.send(err);
         }
-        res.send(pacote);
+        res.status(200).send(pacote);
     });
 }
 exports.buscarPorId = (req, res, next) => {
@@ -42,7 +42,7 @@ exports.buscarPorId = (req, res, next) => {
         if(err){
             res.send(err);
         }
-        res.send(pacote);
+        res.status(200).send(pacote);
     })
 }
 exports.procurar = (req, res, next) => {
@@ -52,7 +52,16 @@ exports.procurar = (req, res, next) => {
             if(err){
                 res.send(err);
             }
-            res.send(pacote);
+            res.status(200).send(pacote);
+        });
+    }
+    if(req.query && req.query.categoriaId){
+        let paramCategoria = req.query.categoriaId;
+        Pacotes.find({categoria: paramCategoria}, (err, pacotes) => {
+            if(err){
+                res.send(err);
+            }
+            res.status(200).send(pacotes);
         });
     }
 }
