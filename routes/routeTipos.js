@@ -1,12 +1,16 @@
 const { Router } = require('express');
 const router = Router();
 const controller = require('../controller/controllerTipos');
+const controllerLogin = require('../controller/controllerLogin');
+const  verifiqueJwt  = require('./jwt/jwt');
 
-router.get('/', controller.listar);
-router.get('/search', controller.procurar);
-router.get('/:id', controller.buscarPorId);
-router.put('/:id', controller.atualizar);
-router.delete('/:id', controller.deletar);
-router.post('/', controller.inserir);
+router.post('/login', controllerLogin.login);
+router.get('/logout', controllerLogin.logout);
+router.get('/',verifiqueJwt, controller.listar);
+router.get('/search', verifiqueJwt, controller.procurar);
+router.get('/:id', verifiqueJwt, controller.buscarPorId);
+router.put('/:id', verifiqueJwt, controller.atualizar);
+router.delete('/:id', verifiqueJwt, controller.deletar);
+router.post('/', verifiqueJwt, controller.inserir);
 
 module.exports = router;
