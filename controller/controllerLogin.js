@@ -15,7 +15,7 @@ exports.login = (req, res, next) => {
                     res.send(err);        
                 }
                 let token = jwt.sign({usuario}, process.env.SECRET, {expiresIn: 300});
-                res.cookie('token', token, { signed: true }).send({"token": token});
+                res.cookie('token', token, { signed: true }).status(200).send({"token": token});
             });
         }
     }
@@ -23,6 +23,6 @@ exports.login = (req, res, next) => {
 
 exports.logout = (req, res, next) => {
     if(req.cookies || req.signedCookies){
-        res.clearCookie('token').send({"msg": "ok"})
+        res.clearCookie('token').status(200).send({"msg": "ok"})
     }
 }
