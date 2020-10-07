@@ -55,7 +55,7 @@ O conceito desse trabalho será baseado de acordo com as funcionalidades realiza
 
 - [x] Realizar as tarefas para alcançar o conceito C;
 
-- [ ] Realizar uma funcionalidade de negócio (ou CRUD) que manipule duas entidades ou mais (pode ser uma coleção ou várias)(utilizando Web Services de forma correta e adequada);
+- [x] Realizar uma funcionalidade de negócio (ou CRUD) que manipule duas entidades ou mais (pode ser uma coleção ou várias)(utilizando Web Services de forma correta e adequada);
 
 - [ ] Login - utilizar autenticação aplicando técnicas de segurança adequadamente (OAuth e JWT);
 
