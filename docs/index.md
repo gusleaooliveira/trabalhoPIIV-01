@@ -57,7 +57,7 @@ O conceito desse trabalho será baseado de acordo com as funcionalidades realiza
 
 - [x] Realizar uma funcionalidade de negócio (ou CRUD) que manipule duas entidades ou mais (pode ser uma coleção ou várias)(utilizando Web Services de forma correta e adequada);
 
-- [ ] Login - utilizar autenticação aplicando técnicas de segurança adequadamente (OAuth e JWT);
+- [x] Login - utilizar autenticação aplicando técnicas de segurança adequadamente (OAuth e JWT);
 
 - [x] Modelagem apropriada dos Web Services (retorno dos status code correto);
 
@@ -69,7 +69,7 @@ O conceito desse trabalho será baseado de acordo com as funcionalidades realiza
 
 - [ ] Login com autenticação aplicando técnicas de segurança e múltiplos papeis (ex: visitante, admin, funcionário)
 
-- [ ] Utilização de um sistema de controle de versão (ex: git) e de um ambiente de colaboração e gerenciamento de código baseado nesse controle de versão (ex: GitHub, Bitbucket). Caso o trabalho seja em dupla, a colaboração deve estar evidenciada;
+- [x] Utilização de um sistema de controle de versão (ex: git) e de um ambiente de colaboração e gerenciamento de código baseado nesse controle de versão (ex: GitHub, Bitbucket). Caso o trabalho seja em dupla, a colaboração deve estar evidenciada;
 
 - [ ] Tratamento de erros, regras de negócio e exceções;
 
