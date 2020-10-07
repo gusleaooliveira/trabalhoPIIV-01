@@ -15,7 +15,7 @@ function verifiqueJwt(req, res, next){
     }
 
     jwt.verify(token, process.env.SECRET, (err, decoded) => {
-        if(err)return res.status(500).send({"msg": "Falha ao autenticar o token!"});
+        if(err)return res.status(401).send({"msg": "Falha ao autenticar o token!"});
 
         req.userId = decoded.id;
         next();        

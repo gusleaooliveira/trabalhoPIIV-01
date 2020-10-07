@@ -1,5 +1,6 @@
 const Categorias = require('../model/modelCategorias');
 
+
 exports.listar = (req, res, next) => {
     Categorias.find({}, (error, categorias) => {
         if(error){
@@ -14,7 +15,7 @@ exports.inserir = (req, res, next) => {
         if(err){
             res.send(err);
         }
-        res.status(200).send(categoria);
+        res.status(201).send(categoria);
     })
 }
 exports.atualizar = (req, res, next) => {

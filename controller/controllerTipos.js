@@ -14,7 +14,7 @@ exports.inserir = (req, res, next) => {
         if(err){
             res.send(err);
         }
-        res.status(200).send(tipo);
+        res.status(201).send(tipo);
     })
 }
 exports.atualizar = (req, res, next) => {
