@@ -4,9 +4,9 @@ const salto = bcrypt.genSaltSync(13);
  
 
 exports.listar = (req, res, next) => {
-    Usuarios.find({}, (error, usuarios) => {
-        if(error){
-            res.status(400).send(error);
+    Usuarios.find({}, (err, usuarios) => {
+        if(err){
+            res.status(400).send(err);
         }
         res.status(200).send(usuarios);
     });
@@ -24,7 +24,7 @@ exports.inserir = (req, res, next) => {
     let newUsuario = new Usuarios(usuario);
     newUsuario.save((err, usuario) => {
         if(err){
-            res.status(400).send(error);
+            res.status(400).send(err);
         }
         res.status(201).send(usuario);
     })
@@ -42,7 +42,7 @@ exports.atualizar = (req, res, next) => {
     }
     Usuarios.findOneAndUpdate({ _id: id}, updateUsuario, {new: true}, (err, usuario) => {
         if(err){
-            res.status(400).send(error);
+            res.status(400).send(err);
         }
         res.status(200).send(usuario);
     });
@@ -51,7 +51,7 @@ exports.deletar = (req, res, next) => {
     let id = req.params.id;
     Usuarios.findByIdAndDelete({ _id: id}, (err, usuario) => {
         if(err){
-            res.status(400).send(error);
+            res.status(400).send(err);
         }
         res.status(200).send(usuario);
     });
@@ -60,7 +60,7 @@ exports.buscarPorId = (req, res, next) => {
     let id = req.params.id;
     Usuarios.findById(id, (err, usuario) => {
         if(err){
-            res.status(400).send(error);
+            res.status(400).send(err);
         }
         res.status(200).send(usuario);
     })
