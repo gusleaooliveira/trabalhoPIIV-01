@@ -12,7 +12,7 @@ let rotaUsuarios = require('./routes/routeUsuarios');
 let rotaTipos = require('./routes/routeTipos');
 let rotaCategorias = require('./routes/routeCategorias');
 
-mongoose.connect('mongodb://localhost/api_store', {
+mongoose.connect(`mongodb+srv://${process.env.USUARIO}:${process.env.SENHA}@cluster0.sl4fb.gcp.mongodb.net/<dbname>?retryWrites=true&w=majority`, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false
